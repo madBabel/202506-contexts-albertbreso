@@ -4,15 +4,15 @@ on:
     workflow_dispatch:
 
 jobs:
-    name: echo-data
-    runs-on: ubuntu-latest
-    steps:
-        - name: Show Info
-          run: |
-            echo ""Nombre del evento: ${{ toJson(github.event_name) }}"
-            echo "Ref: ${{ toJson(github.repository) }}"
-        
-        - name: Retrieve variable
-          run: |
-            echo "$MY_VAR"
-            echo "$ORG_VAR"
+    echo-data
+        runs-on: ubuntu-latest
+        steps:
+            - name: Show Info
+            run: |
+                echo ""Nombre del evento: ${{ toJson(github.event_name) }}"
+                echo "Ref: ${{ toJson(github.repository) }}"
+            
+            - name: Retrieve variable
+            run: |
+                echo "$MY_VAR"
+                echo "$ORG_VAR"
